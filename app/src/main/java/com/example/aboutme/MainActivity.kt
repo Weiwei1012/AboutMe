@@ -18,6 +18,7 @@ import com.example.aboutme.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private var myName: MyName = MyName("Weiwei","sexy & hot")  //create a NyName data instance
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +42,9 @@ class MainActivity : AppCompatActivity() {
             updateNickname(it)
         }
 
+
+        binding.myName = myName
+
     }
 
     private fun addNickname(view: View){
@@ -52,7 +56,8 @@ class MainActivity : AppCompatActivity() {
 
 
 //        nicknameTextView.text = editText.text
-        binding.nicknameText.text = binding.nicknameEdit.text
+//        binding.nicknameText.text = binding.nicknameEdit.text
+        myName.nickname = binding.nicknameEdit.text.toString()  //  "text" data type is CharSequence
 
 //        editText.visibility = View.GONE
 //        view.visibility = View.GONE
@@ -87,6 +92,7 @@ class MainActivity : AppCompatActivity() {
         //Can also apply as
 
         binding.apply {
+
             nicknameEdit.visibility = View.VISIBLE
             doneButton.visibility = View.VISIBLE
             nicknameText.visibility = View.GONE
