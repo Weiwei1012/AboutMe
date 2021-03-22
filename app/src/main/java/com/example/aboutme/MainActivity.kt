@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
+//Data Binding may replace findViewById
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
