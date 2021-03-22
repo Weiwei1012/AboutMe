@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
 
 //        nicknameTextView.text = editText.text
 //        binding.nicknameText.text = binding.nicknameEdit.text
-        myName.nickname = binding.nicknameEdit.text.toString()  //  "text" data type is CharSequence
+        myName?.nickname = binding.nicknameEdit.text.toString()  //  "text" data type is CharSequence
+        binding.invalidateAll()
 
 //        editText.visibility = View.GONE
 //        view.visibility = View.GONE
